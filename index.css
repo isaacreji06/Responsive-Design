@@ -1,0 +1,124 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box; /* Ensure padding and borders are included in the element's total width and height */
+}
+
+body {
+    background: url(./assets/background\ picture.png) no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap; /* Allow elements to wrap on smaller screens */
+    align-items: center; /* Center elements vertically */
+    color: white;
+    padding: 10px;
+}
+
+.location-image {
+    color: white;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+#img {
+    height: 25px;
+    width: 25px;
+}
+
+input {
+    width: 100%;
+    max-width: 500px; /* Restrict max width */
+    height: 25px;
+}
+
+#country, #account, #return, .cart {
+    margin-left: 30px;
+}
+
+.cart {
+    margin-left: 50px;
+}
+
+#prime {
+    display: flex;
+    flex-wrap: wrap;
+    color: white;
+    justify-content: space-between;
+    background-color: rgb(49, 49, 105);
+    padding: 10px;
+}
+
+#right {
+    margin-left: auto; /* Push to the right */
+}
+
+#columns {
+    display: flex;
+    flex-wrap: wrap; /* Allow columns to wrap on smaller screens */
+    margin: 10px 0;
+    justify-content: space-between;
+}
+
+#columns > div {
+    background-color: white;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+#column3 img {
+    width: 100%; /* Make image responsive */
+}
+
+@media screen and (max-width: 768px) {
+    nav {
+        flex-direction: column;
+        align-items: flex-start; /* Align nav items to start */
+    }
+    
+    .location-image, #country, #account, #return, .cart {
+        margin: 10px 0;
+    }
+    
+    #columns {
+        justify-content: center; /* Center columns on smaller screens */
+    }
+    
+    #columns > div {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #column4 {
+        height: auto;
+        text-align: center; /* Center text inside the column */
+    }
+    
+    #right {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    input {
+        width: 100%;
+    }
+    
+    .location-image, #country, #account, #return, .cart {
+        margin-left: 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    #columns > div {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
